@@ -1,11 +1,10 @@
+
 import React from 'react'
 
-export default React.createClass({
-  render() {
-    return (
-    <div>
-      <h1>React App!</h1>
-    </div>
-    )
-  }
-})
+const App = () => {
+  return (
+    <h1>React app!</h1>
+  )
+}
+
+export default App
