@@ -1,7 +1,7 @@
 {
   "name": "cocktails-app",
   "version": "1.0.0",
-  "main": "server/server.js",
+  "main": "server/index.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
