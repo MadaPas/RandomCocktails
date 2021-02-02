@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable no-restricted-globals */
 import React from "react";
+
 import Cocktails from "./Cocktails";
 
 const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 class Search extends React.Component {
-  // 'React.'?
   state = {
     query: "",
     drinks: [],
@@ -36,10 +37,11 @@ class Search extends React.Component {
     }
   };
 
+  randomCocktail = () => {};
+
   render() {
-    console.log(this.state.drinks);
     return (
-      <>
+      <div className="searchContainer">
         <h1>{`It's beggining to look a lot like your favorite cocktail!`}</h1>
         <h2>{`Give the order, please!`}</h2>
         <div className="search">
@@ -48,16 +50,18 @@ class Search extends React.Component {
             onKeyPress={this.handleKeyPress}
             onChange={this.updateQuery}
           />
+          <br></br>
           <button className="button" onClick={this.searchCocktails}>
-            Give me magic!
+            Press for magic
           </button>
-          <Cocktails
-            cocktail={this.state.cocktail}
-            drinks={this.state.drinks}
-          />
         </div>
-      </>
+        <div className="random">
+          <button onClick={this.randomCocktail}>Or.. Be a risk taker</button>
+        </div>
+        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
+      </div>
     );
   }
 }
+
 export default Search;

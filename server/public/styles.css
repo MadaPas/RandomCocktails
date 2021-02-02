@@ -1,44 +1,95 @@
 .instructions {
-    font-size: 20px;
-  }
-  
-  .glass {
-    font-size: 20px;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
+  font-size: 20px;
+  margin-top: 50px;
+}
 
-  .innerCont {
-    flex-direction: column;
-    text-align: left;
-    margin-left: 20px;
-    width: 70%;
-  }
+.instructions .inner {
+  width: 70%;
+}
 
-  .image img {
-    width: 280px;
-    margin-bottom: 20px
-  }
-  
-  .container2 {
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  body {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-image: url("./images/background.jpeg");
-    background-size: cover;
-  }
-  
-  #title {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
+.glass {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.innerCont {
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  width: 70%;
+}
+
+.image img {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.container2 {
+  flex-direction: column;
+  text-align: left;
+}
+
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: url("./images/background.jpeg");
+  background-size: cover;
+}
+
+#title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50vw;
+  margin-left: 25vw;
+}
+
+.title h1 {
+  margin-top: 25px;
+}
+
+/* Styles search bar */
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.searchContainer input {
+  width: 10em;
+  padding: 5px 50px;
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+
+.searchContainer button {
+  color: #c8ac7b;
+  border: rgb(5, 5, 5);
+  padding: 5px 5px;
+}
+
+.search button {
+  width: 10em;
+  font-size: 20px;
+}
+
+.random button {
+  width: 15em;
+  height: auto;
+  font-size: 18px;
+}
