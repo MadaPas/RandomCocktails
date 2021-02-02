@@ -4,6 +4,7 @@ import React from "react";
 import sweetAlert from "@sweetalert/with-react";
 
 import Cocktails from "./Cocktails";
+import SearchResults from "./SearchResults";
 
 const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
@@ -80,23 +81,19 @@ class Search extends React.Component {
             </button>
           </div>
           <div className="random">
-            <button onClick={this.randomCocktail}>Be a risk taker - random drink!</button>
+            <button onClick={this.randomCocktail}>
+              Be a risk taker - random drink!
+            </button>
           </div>
         </div>
       );
-    } else {
+    } else if (this.state.drinks.length === 1) {
       return (
-        <div className="cocktail">
-          <Cocktails
-            cocktail={this.state.cocktail}
-            drinks={this.state.drinks}
-          />
-          <button onClick={this.refreshPage}>Go back to search</button>
-          <button onClick={this.randomCocktail}>Be a risk taker - random drink!</button>
-        </div>
+        <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
       );
+    } else {
+      return <SearchResults drinks={this.state.drinks} />;
     }
   }
 }
-
 export default Search;

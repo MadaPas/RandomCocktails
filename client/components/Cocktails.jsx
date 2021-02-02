@@ -11,6 +11,10 @@ class Cocktails extends React.Component {
     };
   }
 
+  refreshPage = () => {
+    window.location.reload(false);
+  };
+
   componentDidUpdate(prevProps) {
     if (
       prevProps.drinks !== this.props.drinks ||
@@ -58,7 +62,7 @@ class Cocktails extends React.Component {
           </div>
           <div className="outerContainer">
             <div className="image">
-              <img src={image} alt={`image of a ${name}`} />
+              <img src={image} alt={`${name}`} />
             </div>
             <div className="innerCont">
               <div className="ingredients">
@@ -86,11 +90,14 @@ class Cocktails extends React.Component {
               <br></br>
               <div className="glass">
                 <span id="title">Glass: </span>
-                <div id="instructions" className="inner">
+                <div id="glass" className="inner">
                   {glass}
                 </div>
               </div>
             </div>
+          </div>
+          <div className="cocktail">
+            <button onClick={this.refreshPage}>Go back to search</button>
           </div>
         </>
       );
