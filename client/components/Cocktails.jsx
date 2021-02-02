@@ -53,22 +53,24 @@ class Cocktails extends React.Component {
       ];
       return (
         <>
-          <div>
+          <div id="cocktailName">
             <h1>{name}</h1>
           </div>
-          <div className="container">
+          <div className="outerContainer">
             <div className="image">
-              <img src={image} alt={`image: ${name}`} />
+              <img src={image} alt={`image of a ${name}`} />
             </div>
             <div className="innerCont">
               <div className="ingredients">
                 <span id="title">Ingredients: </span>
-                <ul>
+                <ul id="ingredients">
                   {ingredients.map((ingredient, idx) => {
                     if (ingredient[0] !== null || ingredient[1] !== null) {
                       return (
                         <li key={idx}>
-                          {ingredient[1]} {"   "} {ingredient[0]}
+                          <p>
+                            {ingredient[1]} {ingredient[0]}
+                          </p>
                         </li>
                       );
                     }
@@ -77,12 +79,16 @@ class Cocktails extends React.Component {
               </div>
               <div className="instructions">
                 <span id="title">Instructions: </span>
-                <div className="inner">{instructions}</div>
+                <div id="instructions" className="inner">
+                  {instructions}
+                </div>
               </div>
               <br></br>
               <div className="glass">
                 <span id="title">Glass: </span>
-                <div className="inner">{glass}</div>
+                <div id="instructions" className="inner">
+                  {glass}
+                </div>
               </div>
             </div>
           </div>
