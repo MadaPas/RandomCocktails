@@ -1,32 +1,44 @@
 .instructions {
-  font-size: 20px;
-}
+    font-size: 20px;
+  }
+  
+  .glass {
+    font-size: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
 
-.glass {
-  font-size: 20px;
-}
+  .innerCont {
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+    width: 70%;
+  }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.container2 {
-  flex-direction: column;
-  text-align: left;
-}
-
-body {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-image: url("./images/background.jpeg");
-  background-size: cover;
-}
-
-#title {
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
+  .image img {
+    width: 280px;
+    margin-bottom: 20px
+  }
+  
+  .container2 {
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url("./images/background.jpeg");
+    background-size: cover;
+  }
+  
+  #title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }

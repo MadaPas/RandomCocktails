@@ -3,13 +3,9 @@
 import React from "react";
 import request from "superagent";
 
-const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php";
-const cocktail = "mojito";
+const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+const cocktail = "margarita";
 
-const imgStyle = {
-  width: "280px",
-  marginRight: "15px",
-};
 class Cocktails extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +23,6 @@ class Cocktails extends React.Component {
       .get(apiUrl)
       .query({ s: cocktail })
       .then((res) => {
-        // console.log(res.body)
         const x = res.body.drinks[0];
         const { strDrink, strInstructions, strDrinkThumb } = x;
         const ingredients = [
@@ -49,7 +44,6 @@ class Cocktails extends React.Component {
         ];
 
         const { strGlass } = x;
-        // console.log(ingredients)
         this.setState({
           name: strDrink,
           image: strDrinkThumb,
@@ -64,18 +58,15 @@ class Cocktails extends React.Component {
     return (
       <>
         <div>
-          <h2>{this.state.name}</h2>
+          <h1>{this.state.name}</h1>
         </div>
         <div className="container">
-          <img
-            src={this.state.image}
-            style={imgStyle}
-            alt={`image ${this.state.name}`}
-          />
-          <div className="container2">
+          <div className="image">
+            <img src={this.state.image} alt={`image:  ${this.state.name}`} />
+          </div>
+          <div className="innerCont">
             <div className="ingredients">
               <span id="title">Ingredients: </span>
-              {console.log(this.state.ingredients)}
               <ul>
                 {this.state.ingredients.map((ingredient, idx) => {
                   if (ingredient[0] !== null && ingredient[1] !== null) {
@@ -89,13 +80,13 @@ class Cocktails extends React.Component {
               </ul>
             </div>
             <div className="instructions">
-              <span id="title">How to prepare: </span>
-              <div>{this.state.instructions}</div>
+              <span id="title">Instructions: </span>
+              <div className="inner">{this.state.instructions}</div>
             </div>
             <br></br>
             <div className="glass">
               <span id="title">Glass: </span>
-              <div>{this.state.glass}</div>
+              <div className="inner">{this.state.glass}</div>
             </div>
           </div>
         </div>
