@@ -1,5 +1,3 @@
-/* eslint-disable array-callback-return */
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 
 class Cocktails extends React.Component {
@@ -11,7 +9,7 @@ class Cocktails extends React.Component {
     };
   }
 
-  refreshPage = () => {
+  reload = () => {
     window.location.reload(false);
   };
 
@@ -97,7 +95,7 @@ class Cocktails extends React.Component {
             </div>
           </div>
           <div className="cocktail">
-            <button onClick={this.refreshPage}>Go back to search</button>
+            <button onClick={this.reload}>Go back to search</button>
           </div>
         </>
       );

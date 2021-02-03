@@ -60,7 +60,8 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "lint": "eslint **/*.js || exit 0"
   },
   "babel": {
     "presets": [

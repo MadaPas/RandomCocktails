@@ -1,7 +1,7 @@
 import React from "react";
 import Cocktails from "./Cocktails";
 
-class SearchResults extends React.Component {
+class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,14 +11,15 @@ class SearchResults extends React.Component {
     };
   }
 
-  refreshPage = () => {
+  reload = () => {
     window.location.reload(false);
   };
 
-  handleClick = (id) => {
+  click = (id) => {
     const selectedCocktail = this.state.drinks.find(
       (drink) => drink.idDrink === id
     );
+
     this.setState({
       drinks: this.state.drinks,
       cocktail: selectedCocktail,
@@ -49,12 +50,12 @@ class SearchResults extends React.Component {
                 <li id="selectedCocktail" key={id}>
                   <div className="result">
                     <img
-                      onClick={() => this.handleClick(id)}
+                      onClick={() => this.click(id)}
                       src={image}
                       alt={`${name}`}
                     />
                     <div className="inner-result">
-                      <h2 onClick={() => this.handleClick(id)}>{name}</h2>
+                      <h2 onClick={() => this.click(id)}>{name}</h2>
                       <p>
                         Ingredients: {strIngredient1}, {strIngredient2},{" "}
                         {strIngredient3}...
@@ -66,7 +67,7 @@ class SearchResults extends React.Component {
             })}
           </ul>
           <div className="cocktail">
-            <button onClick={this.refreshPage}>Go back to search</button>
+            <button onClick={this.reload}>Go back to search</button>
           </div>
         </div>
       );
@@ -74,4 +75,4 @@ class SearchResults extends React.Component {
   }
 }
 
-export default SearchResults;
+export default Results;

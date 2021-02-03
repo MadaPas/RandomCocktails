@@ -1,15 +1,15 @@
 import React from "react";
 
-const Title = () => {
-  const refreshPage = () => {
+const Main = () => {
+  const reload = () => {
     window.location.reload(false);
   };
 
   return (
     <div className="title">
-      <h1 onClick={refreshPage}>Cocktails</h1>
+      <h1 onClick={reload}>Cocktails</h1>
     </div>
   );
 };
 
-export default Title;
+export default Main;

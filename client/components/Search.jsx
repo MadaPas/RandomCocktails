@@ -4,7 +4,7 @@ import React from "react";
 import sweetAlert from "@sweetalert/with-react";
 
 import Cocktails from "./Cocktails";
-import SearchResults from "./SearchResults";
+import Results from "./Results";
 
 const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
@@ -15,13 +15,13 @@ class Search extends React.Component {
     cocktail: null,
   };
 
-  updateQuery = (event) => {
+  update = (event) => {
     this.setState({
       query: event.target.value,
     });
   };
 
-  searchCocktails = () => {
+  search = () => {
     fetch(`${apiUrl}${this.state.query}`)
       .then((res) => res.json())
       .then((json) => {
@@ -43,11 +43,11 @@ class Search extends React.Component {
 
   handleKeyPress = () => {
     if (event.key === "Enter") {
-      this.searchCocktails();
+      this.search();
     }
   };
 
-  randomCocktail = () => {
+  random = () => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then((res) => res.json())
       .then((json) => {
@@ -59,7 +59,7 @@ class Search extends React.Component {
       .catch((error) => console.log(error.message));
   };
 
-  refreshPage = () => {
+  reload = () => {
     window.location.reload(false);
   };
 
@@ -67,21 +67,22 @@ class Search extends React.Component {
     if (this.state.cocktail === null) {
       return (
         <div className="searchContainer">
-          <h1>{`It's beggining to look a lot like your favorite cocktail!`}</h1>
+          <h1>{`It's beggining to look a lot like `}</h1>
+          <h1>{`your favorite cocktail!`}</h1>
           <h2>{`Give the order, please!`}</h2>
           <div className="search">
             <input
               className="input"
               onKeyPress={this.handleKeyPress}
-              onChange={this.updateQuery}
+              onChange={this.update}
             />
             <br></br>
-            <button className="button" onClick={this.searchCocktails}>
+            <button className="button" onClick={this.search}>
               Press for magic
             </button>
           </div>
           <div className="random">
-            <button onClick={this.randomCocktail}>
+            <button onClick={this.random}>
               Be a risk taker - random drink!
             </button>
           </div>
@@ -92,7 +93,7 @@ class Search extends React.Component {
         <Cocktails cocktail={this.state.cocktail} drinks={this.state.drinks} />
       );
     } else {
-      return <SearchResults drinks={this.state.drinks} />;
+      return <Results drinks={this.state.drinks} />;
     }
   }
 }

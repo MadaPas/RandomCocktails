@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Title from "./Title";
-import Search from "./Search";
-import SearchResults from "./SearchResults";
+import Results from "./Results";
 import Cocktails from "./Cocktails";
+import Main from "./Main";
+import Search from "./Search";
 
 const App = () => {
   return (
     <Router>
       <div className="container">
-        <Route path="/" component={Title} />
+        <Route path="/" component={Main} />
         <Route exact path="/" component={Search} />
-        <Route exact path="/results/:query" component={SearchResults} />
+        <Route exact path="/results/:query" component={Results} />
         <Route exact path="/cocktail/:name" component={Cocktails} />
       </div>
     </Router>
