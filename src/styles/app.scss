@@ -12,12 +12,12 @@ body {
 /* title */
 .title {
   font-size: 2em;
-  text-align:right;
+  text-align: right;
   width: 90%;
 }
 
 .title h1 {
-  text-align:right;
+  text-align: right;
   color: black;
 }
 
@@ -32,7 +32,7 @@ body {
   font-size: 20px;
   margin: 5px;
   background-color: #000000;
-  color:#eeb85a;
+  color: #eeb85a;
   text-align: center;
   font-family: 'Copperplate', cursive;
   transition: width 0.5s ease-in-out;
@@ -102,7 +102,7 @@ body {
   flex-direction: column;
   justify-content: right;
   font-size: 2em;
-  text-align:right;
+  text-align: right;
   width: 90%;
   color: black;
 }
@@ -131,7 +131,8 @@ body {
   background-color: black;
 }
 
-.swal-text, .swal-title {
+.swal-text,
+.swal-title {
   color: #eeb85a;
 }
 
@@ -161,7 +162,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url('./images/index.jpg');
+  background-image: url('../images/index.jpg');
   background-position-x: center;
 }
 
@@ -194,20 +195,22 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-#instructions, #glass {
+#instructions,
+#glass {
   font-family: 'Segoe UI', sans-serif;
 }
 
 #cocktailName {
   font-size: 20px;
   flex-direction: column;
-  text-align:right;
+  text-align: right;
   width: 90%;
-  text-align:right;
+  text-align: right;
   color: black;
 }
 
-.instructions, .glass {
+.instructions,
+.glass {
   font-size: 17px;
   margin-top: 4px;
 }

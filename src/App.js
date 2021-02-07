@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Results from "./Results";
-import Cocktails from "./Cocktails";
-import Main from "./Main";
-import Search from "./Search";
+import "./styles/app.scss";
+
+import Results from "./components/Results";
+import Cocktails from "./components/Cocktails";
+import Main from "./components/Main";
+import Search from "./components/Search";
 
 const App = () => {
   return (

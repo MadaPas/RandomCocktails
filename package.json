@@ -1,90 +1,27 @@
 {
-  "name": "cocktails-app",
-  "version": "1.0.0",
-  "main": "server/index.js",
+  "name": "random-cocktails",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-react": "^7.9.4",
     "@sweetalert/with-react": "^0.1.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.2.6",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^1.1.0",
-    "body-parser": "^1.19.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "express": "^4.17.1",
-    "jest": "^26.6.3",
-    "nodemon": "^2.0.7",
-    "npm-run-all": "^4.1.5",
-    "react-router-dom": "^5.2.0",
-    "superagent": "^6.1.0",
-    "sweetalert": "^2.1.2"
-  },
-  "author": "MadaPas",
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-react": "^7.9.4",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.2.6",
-    "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^7.0.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "gh-pages": "^3.1.0",
-    "jest": "^26.6.3",
-    "nodemon": "^2.0.7",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "input-range-scss": "^1.5.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "webpack": "^5.19.0",
-    "webpack-cli": "^4.4.0",
-    "webpack-dev-server": "^3.11.2"
+    "react-scripts": "4.0.2",
+    "sass": "^1.32.6",
+    "scss": "^0.2.4",
+    "sweetalert": "^2.1.2",
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "client": "webpack-dev-server --hot --inline",
-    "dev": "run-p dev:client dev:server",
-    "dev:client": "webpack --watch",
-    "dev:server": "nodemon server",
-    "start": "run-s build server",
-    "build": "webpack",
-    "server": "node server",
-    "test": "jest --watchAll",
-    "lint": "eslint **/*.js || exit 0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-object-rest-spread"
-    ]
-  },
-  "jest": {
-    "setupFiles": [
-      "./tests/setup.js"
-    ]
-  },
-  "env": {
-    "start": {
-      "presets": [
-        "react-hmre"
-      ]
-    }
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
